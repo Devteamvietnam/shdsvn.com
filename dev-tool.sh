@@ -24,12 +24,14 @@ shift
 if [ "$CMD" = "build" ] ; then
   rm -rf $PROJECT_DIR/build
   if $window; then
+    echo "Start build.... delete folder build if exits"
     echo "Kill node...."
     #taskkill //F //IM node.exe
   fi
   yarn build
 elif [ "$CMD" = "deploy" ] ; then
   if $window; then
+    echo "Start deploy in github.io...."
     echo "Kill node...."
     #taskkill //F //IM node.exe
   fi
