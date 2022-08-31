@@ -27,20 +27,19 @@ if [ "$CMD" = "build" ] ; then
     echo "Kill node...."
     #taskkill //F //IM node.exe
   fi
-  npm run build
+  yarn build
 elif [ "$CMD" = "deploy" ] ; then
   if $window; then
     echo "Kill node...."
     #taskkill //F //IM node.exe
   fi
-  npm run deploy
+  yarn deploy
 elif [ "$CMD" = "dev" ] ; then
-  cp $PROJECT_DIR/dev.tsconfig.json $PROJECT_DIR/tsconfig.json
   if $window; then
     echo "Kill node...."
     #taskkill //F //IM node.exe
   fi
-  npm start
+  yarn start
 else
   echo 'Usage: '
   echo "  ./dev-tool.sh build       build project "
