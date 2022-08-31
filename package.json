@@ -3,6 +3,7 @@
   "name": "shdsvn.com",
   "version": "0.1.0",
   "author": "ddthien-dev@gmail.com",
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
