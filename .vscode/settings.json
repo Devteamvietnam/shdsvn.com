@@ -4,5 +4,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "cSpell.words": ["flowtype", "Parens", "precached", "shdsvn"]
+  "cSpell.words": ["flowtype", "Parens", "precached", "shdsvn", "webfonts"]
 }
