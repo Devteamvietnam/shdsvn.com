@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 import { AppContext } from '../api';
 
 import { App } from './UIApp';
 
-import { UIComponent } from '../components';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { UIHeader } from '../components/header/UIHeader';
 
 export class UIPages extends Component {
   appContext: AppContext;
@@ -17,13 +19,27 @@ export class UIPages extends Component {
   }
 
   render() {
+    const theme = createTheme();
+
+    const sections = [
+      { title: 'Home', url: '#' },
+      { title: 'Blog', url: '#' },
+      { title: 'Project', url: '#' },
+      { title: 'About', url: '#' }
+    ];
+
     let event = this.appContext.consumeEvent();
 
     return (
-      <div className="ui-application">
-        <UIComponent />
-        <App appContext={this.appContext} event={event} />
-      </div>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Container maxWidth="lg">
+          <UIHeader sections={sections} title={'SHDSVN'} />
+          <main>
+            <App appContext={this.appContext} event={event} />
+          </main>
+        </Container>
+      </ThemeProvider>
     );
   }
 }
