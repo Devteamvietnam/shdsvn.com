@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { AppContextProps } from '@/api';
 
 import logo from '../assets/images/logo.svg';
-import '../assets/scss/App.scss';
+import './App.scss';
 
 export class App extends Component<AppContextProps> {
   render() {

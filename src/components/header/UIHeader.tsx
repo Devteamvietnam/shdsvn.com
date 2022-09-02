@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import { AppContextProps } from '../../api';
-
 import {
   Collapse,
   Navbar,
@@ -9,12 +7,13 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from 'reactstrap';
+
+import { AppContextProps } from '@/api';
+
+import logo from '../../assets/images/logo.svg';
+import '../header/style.scss';
 
 export class UIHeader extends Component<AppContextProps> {
   constructor(props) {
@@ -32,10 +31,14 @@ export class UIHeader extends Component<AppContextProps> {
     });
   }
   render() {
+    let name = 'SHDSVN';
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">SHDSVN</NavbarBrand>
+          <NavbarBrand href="/">
+            <img src={logo} className="App-logo-header" alt="logo" />
+            {name}
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse navbar>
             <Nav className="ml-auto" navbar>
@@ -45,17 +48,6 @@ export class UIHeader extends Component<AppContextProps> {
                   GitHub
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>

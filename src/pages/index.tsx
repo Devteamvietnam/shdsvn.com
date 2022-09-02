@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
-import { UIHeader } from '../components/header/UIHeader';
 import { AppContext } from '../api';
+
+import { App } from './UIApp';
+
+import { UIComponent } from '../components';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export class UIComponent extends Component {
+export class UIPages extends Component {
   appContext: AppContext;
 
   constructor(props: any) {
@@ -18,7 +21,8 @@ export class UIComponent extends Component {
 
     return (
       <div className="ui-application">
-        <UIHeader appContext={this.appContext} event={event} />
+        <UIComponent />
+        <App appContext={this.appContext} event={event} />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './assets/scss/index.scss';
+import './stylesheet.scss';
 
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
