@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/shdsvn.com/static/css/main.073c9b0a.css",
-    "main.js": "/shdsvn.com/static/js/main.7f922765.js",
+    "main.css": "/shdsvn.com/static/css/main.aa7cef72.css",
+    "main.js": "/shdsvn.com/static/js/main.b3eb81b1.js",
     "static/js/787.5ab2ddbd.chunk.js": "/shdsvn.com/static/js/787.5ab2ddbd.chunk.js",
     "static/media/logo.svg": "/shdsvn.com/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/shdsvn.com/index.html",
-    "main.073c9b0a.css.map": "/shdsvn.com/static/css/main.073c9b0a.css.map",
-    "main.7f922765.js.map": "/shdsvn.com/static/js/main.7f922765.js.map",
+    "main.aa7cef72.css.map": "/shdsvn.com/static/css/main.aa7cef72.css.map",
+    "main.b3eb81b1.js.map": "/shdsvn.com/static/js/main.b3eb81b1.js.map",
     "787.5ab2ddbd.chunk.js.map": "/shdsvn.com/static/js/787.5ab2ddbd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.7f922765.js"
+    "static/css/main.aa7cef72.css",
+    "static/js/main.b3eb81b1.js"
   ]
 }
