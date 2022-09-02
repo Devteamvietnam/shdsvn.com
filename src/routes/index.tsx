@@ -8,7 +8,7 @@ function AppRouter() {
   let router = (
     <Router>
       <Routes>
-        <Route path="/" element={<UIPages />} />
+        <Route path="/shdsvn.com" element={<UIPages />} />
       </Routes>
     </Router>
   );
