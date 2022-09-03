@@ -1,57 +1,77 @@
 import React, { Component } from 'react';
 
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
-} from 'reactstrap';
-
-import { AppContextProps } from '@/api';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
 
 import logo from '../../assets/images/logo.svg';
+
 import '../header/style.scss';
 
-export class UIHeader extends Component<AppContextProps> {
-  constructor(props) {
-    super(props);
+interface HeaderProps {
+  sections: Array<{
+    title: string;
+    url: string;
+    description: string;
+  }>;
+  title: string;
+}
 
-    this.toggle = this.toggle.bind(this);
-
-    this.state = {
-      isOpen: false
-    };
-  }
-  toggle() {
-    this.setState({
-      isOpen: !this.state
-    });
-  }
+export class UIHeader extends Component<HeaderProps> {
   render() {
-    let name = 'SHDSVN';
+    const { sections, title } = this.props;
+
     return (
-      <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">
-            <img src={logo} className="App-logo-header" alt="logo" />
-            {name}
-          </NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem></NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/Devteamvietnam/shdsvn.com">
-                  GitHub
-                </NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
+      <React.Fragment>
+        <AppBar position="relative">
+          <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Typography
+              component="h1"
+              variant="h5"
+              color="inherit"
+              align="left"
+              noWrap
+              mt={1}
+              sx={{ flex: 1 }}
+            >
+              {title}
+            </Typography>
+            <Typography
+              component="h1"
+              variant="h5"
+              color="inherit"
+              align="left"
+              noWrap
+              mt={1}
+              sx={{ flex: 1 }}
+            >
+              <img src={logo} className="App-logo-header" alt="logo" />
+            </Typography>
+            <Button variant="outlined" size="small"></Button>
+          </Toolbar>
+          <Toolbar
+            component="nav"
+            variant="dense"
+            sx={{ justifyContent: 'center', overflowX: 'auto' }}
+          >
+            {sections.map(section => (
+              <Link
+                color="inherit"
+                rel="noopener"
+                underline="none"
+                key={section.title}
+                variant="body1"
+                href={section.url}
+                sx={{ p: 2, flexShrink: 0 }}
+              >
+                {section.title}
+              </Link>
+            ))}
+          </Toolbar>
+        </AppBar>
+      </React.Fragment>
     );
   }
 }
