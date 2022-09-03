@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+
 import AppRouter from './routes';
 
 const root = ReactDOM.createRoot(
