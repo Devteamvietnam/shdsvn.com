@@ -25,8 +25,15 @@ export class UIHeader extends Component<HeaderProps> {
 
     return (
       <React.Fragment>
-        <AppBar position="relative">
-          <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <AppBar
+          position="static"
+          color="default"
+          elevation={0}
+          sx={{ borderBottom: theme => `1px solid ${theme.palette.divider}` }}
+        >
+          <Toolbar
+            sx={{ borderBottom: 1, borderColor: 'divider', flexWrap: 'wrap' }}
+          >
             <Typography
               component="h1"
               variant="h5"
@@ -49,12 +56,16 @@ export class UIHeader extends Component<HeaderProps> {
             >
               <img src={logo} className="App-logo-header" alt="logo" />
             </Typography>
-            <Button variant="outlined" size="small"></Button>
+            <Button size="small"></Button>
           </Toolbar>
           <Toolbar
             component="nav"
             variant="dense"
-            sx={{ justifyContent: 'center', overflowX: 'auto' }}
+            sx={{
+              justifyContent: 'center',
+              overflowX: 'auto',
+              flexWrap: 'wrap'
+            }}
           >
             {sections.map(section => (
               <Link
