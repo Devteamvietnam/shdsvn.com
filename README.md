@@ -1,46 +1,166 @@
-# Getting Started with Create React App
+## SHDSVN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-## Available Scripts
+## Authors
 
-In the project directory, you can run:
+- [@ddthien.dev](https://www.github.com/octokatherine)
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [@Review Demo](https://devteamvietnam.github.io/shdsvn.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Project
 
-### `npm test`
+Comming soon....
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Acknowledgements
 
-### `npm run build`
+- [React](https://reactjs.org)
+- [TypeScipt](https://www.typescriptlang.org)
+- [Create-react-app](https://create-react-app.dev)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Reference
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Get all items
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```http
+  GET /api/items
+```
 
-### `npm run eject`
+| Parameter | Type     | Description           |
+| :-------- | :------- | :-------------------- |
+| `api_key` | `string` | **Required**. API key |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Get item
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```http
+  GET /api/items/${id}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### add(num1, num2)
 
-## Learn More
+Takes two numbers and returns the sum.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY`
+
+`ANOTHER_API_KEY`
+
+## Features
+
+- cooming soon..
+
+## Installation Enviroment
+
+In this project using
+
+```bash
+   - VScode
+   - Nodejs
+   - Git
+   - comming soon ...
+```
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Devteamvietnam/shdsvn.com
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies default
+
+```bash
+  yarn install
+```
+
+Start the server
+
+```bash
+  yarn start
+```
+
+Install with dev-tool.sh
+
+```bash
+  chmod +777 dev-tool.sh
+```
+
+Start the server
+
+```bash
+  ./dev-tool.sh dev
+```
+
+## Deployment in github.io with gh-pages
+
+To deploy this project run
+
+```bash
+  ./dev-tool.sh build
+```
+
+```bash
+  ./dev-tool.sh deploy
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Support
+
+For support, email thiendinh.dev@gmail.com
+
+## Tech Stack
+
+**Client:** React, Typescript
+
+**Server:** Comming soon...
+
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+## 🛠 Skills
+
+Javascript, HTML, CSS...
+
+# Hi, I'm ddthien.dev from VietNam with luv! 👋
+
+## 🚀 About Me
+
+I'm a full stack developer...
+
+## Usage/Examples
+
+```javascript
+import Component from 'my-project';
+
+function App() {
+  return <Component />;
+}
+```
