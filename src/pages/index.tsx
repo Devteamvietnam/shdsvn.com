@@ -7,6 +7,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
+import GlobalStyles from '@mui/material/GlobalStyles';
 
 import { AppContext } from '../api';
 
@@ -86,6 +87,9 @@ export class UIPages extends Component {
     const posts = [];
     return (
       <ThemeProvider theme={theme}>
+        <GlobalStyles
+          styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }}
+        />
         <CssBaseline />
         <Container maxWidth="xl">
           <UIHeader sections={sections} title={'SHDSVN'} />
