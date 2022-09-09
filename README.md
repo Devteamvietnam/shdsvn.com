@@ -4,7 +4,7 @@
 
 ## Authors
 
-- [@ddthien.dev](https://www.github.com/octokatherine)
+- [@ddthien.dev](https://www.github.com/deveyy)
 
 ## Demo
 
